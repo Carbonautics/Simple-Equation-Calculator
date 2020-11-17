@@ -23,11 +23,9 @@ def process():
 #this line checks the input for any alphabets lower & upper case, comma, colon, braces, whitespaces and removes/denies those characters. 
     equation = re.sub('[a-zA-z,:()" "]', '', equation)
 # Making eval() safe using regex to filter out characters or keywords
-
     if previous == 0:
         previous = eval(equation)
     else:
         previous = eval(str(previous) + equation)
-
 while run:
     process()
